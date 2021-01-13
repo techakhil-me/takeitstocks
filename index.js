@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
 
-
+var port = process.env.PORT || 8080;
 const rp = require('request-promise');
 const ch = require('cheerio');
 // const url = 'http://www.a1intradaytips.in/';
@@ -41,7 +41,7 @@ rp(url).then(function(html) {
 
 
 
-app.listen(5000, () => {
+app.listen(port, () => {
   console.log('server started');
   
 });
