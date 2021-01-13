@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html, body, .grid-container { height: 100%; margin: 0; transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);}
+
+
+.bg {
+  position:absolute;
+  z-index:-5;
+  width:100vw;
+  height:100vh;
+  background: #F9F7FB;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "sidebar card1 card2 card3"
+    "sidebar card1 card4 card4"
+    "sidebar card5 card6 card7";
+}
+
+.sidebar { grid-area: sidebar;
+background: #00D09C;
+}
+
+.card1 { grid-area: card1; }
+
+.card2 { grid-area: card2; }
+
+.card3 { grid-area: card3; }
+
+.card4 { grid-area: card4; }
+
+.card5 { grid-area: card5; }
+
+.card6 { grid-area: card6; }
+
+.card7 { grid-area: card7; }
+
+
+/* For presentation only, no need to copy the code below */
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.sidebar {
+/*   border: 1px solid red; */
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card {
+  position: relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  width:80%;
+  height:80%;
+  border-radius:16px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 6px rgba(50, 50, 50, 0.25);
+  background: #F9F7FB;
+  box-shadow: 0px 0px 6px rgba(50, 50, 50, 0.25); 
+  padding:10px;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.cardimg {
+  z-index:0;
+  position:absolute;
+  width:100vw;
+  height:100vh;
+  top:0;
+  left:0;
+  filter:blur(10px);
+/*   display:none; */
+}
+
+.cardtop{
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  align-items:start;
+  justify-content:none;
+  font-family:roboto;
+}
+.stock{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+color: rgba(0, 0, 0, 0.6);
+}
+.title{
+  font-weight: 700;
+}
+.subtitle {
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 21px;
+color: #3D3D3D;
+}
+.cardbottom{
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  align-items:end;
+  text-align:right;
+}
+.price{
+display: flex;
+align-items: center;
+text-align: right;
+color: #23C82C;
+font-size: 28px;
+}
+
+.card:hover{
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.sidebar{
+  flex-direction:column;
+  justify-content:space-between;
+  border-radius:0 20px 20px 0;
+}
+
+.brand{
+  width: 80%;
+  margin:10px;
+}
+.info {
+  font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 33px;
+text-align: justify;
+  margin:10%;
+
+color: #000000;
+}
+.infosubtitle {
+  color: #3D3D3D;
+
+}
+
+.sidebarbottom{
+  margin:10%;
+  display:flex;
+  flex-direction:column;
+}
+
+button{
+  cursor:pointer; 
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:none;
+  width:160px;
+  height:40px;
+  margin:10px;
+  font-size:12px;
+  background: #00D09C;
+box-shadow: -5px 5px 10px rgba(0, 187, 140, 0.2), 5px -5px 10px rgba(0, 187, 140, 0.2), -5px -5px 10px rgba(0, 229, 172, 0.9), 5px 5px 13px rgba(0, 187, 140, 0.9), inset 1px 1px 2px rgba(0, 229, 172, 0.3), inset -1px -1px 2px rgba(0, 187, 140, 0.5);
+  border-radius: 40px;
+}
+button:active {
+  box-shadow: 1px 1px 2px rgba(0, 229, 172, 0.3), -1px -1px 2px rgba(0, 187, 140, 0.5), inset -5px 5px 10px rgba(0, 187, 140, 0.2), inset 5px -5px 10px rgba(0, 187, 140, 0.2), inset -5px -5px 10px rgba(0, 229, 172, 0.9), inset 5px 5px 13px rgba(0, 187, 140, 0.9);
+}
+.donate,.theme{
+  font-size:12px;
+}
+.dark .bg,.dark .card{
+  filter:invert(1);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 800px)
+{
+  .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px 1fr 1fr 1fr 0.5fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "sidebar sidebar"
+    "card1 card2"
+    "card3 card4"
+    "card5 card6"
+    "card7 card7";
+  height:100%;
+  width:100%;
+}
+.info{
+  display:none;
+}
+.brand{
+  height:80%;
+  margin-right:0;
+}
+.sidebar{
+  border-radius: 0px 0px 10px 10px;
+  flex-direction:row;
+}
+/* .sidebarbottom{
+  flex-direction:row;
+} */
+button{
+  margin:4px;
+  width:100px;
+  height:16px;
+  font-size:10px;
+}
+.donate,.theme{
+  font-size:10px;
+}
+.coffee{
+  display:none;
+}
+  
+  
+}
+
+/* .brand{
+  filter:invert(0);
+}
+button *{
+  filter:invert(0);
+} */

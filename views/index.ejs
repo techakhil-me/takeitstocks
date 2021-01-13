@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <link rel="stylesheet" href="/css/style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Take It Stocks</title>
+</head>
+ 
+<body>
+    <img class="bg" src="https://cdn.discordapp.com/attachments/765973145852575746/796597938888900661/bg.svg"/>
+<div class="grid-container">
+  <div class="sidebar">
+    <img class="brand" src="https://cdn.discordapp.com/attachments/765973145852575746/796652139563843598/Group_5281.svg"/>
+    <div class="info"><div class="infotitle" >The Best Stocks to Buy Today.</div>
+      <div class="infosubtitle" >The ultimate list of stocks curated by experts and handpicked for you.</div>
+    
+    </div>
+    <div class="sidebarbottom">
+      <button class="theme stock">CHANGE THEME</button>
+      <button class="donate stock"><img class="coffee" src="https://cdn.discordapp.com/attachments/765973145852575746/796659339900223508/Group_518.svg"/>BUY ME A COFFEE</button>
+    </div>
+  </div>
+  <div class="card1"><div class="card">
+  <img class="cardimg" src="https://cdn.discordapp.com/attachments/765973145852575746/796597938888900661/bg.svg"/>
+  <div class="cardtop">
+<div class="stock title"><%= stock1['code'] %></div>
+    <div class="stock subtitle"><%= stock1['company'] %></div>
+</div>
+  <div class="cardbottom">
+    <div class="stock price">₹<%= stock1['price'] %></div>
+    <div class="stock subtitle"><%= stock1['desc'] %></div>
+  </div>
+  
+</div></div>
+  <div class="card2"><div class="card">
+  <img class="cardimg" src="https://cdn.discordapp.com/attachments/765973145852575746/796597938888900661/bg.svg"/>
+  <div class="cardtop">
+<div class="stock title"><%= stock2['code'] %></div>
+    <div class="stock subtitle"><%= stock2['company'] %></div>
+</div>
+  <div class="cardbottom">
+    <div class="stock price">₹<%= stock2['price'] %></div>
+    <div class="stock subtitle"><%= stock2['desc'] %></div>
+  </div>
+  
+</div></div>
+  <div class="card3"><div class="card">
+  <img class="cardimg" src="https://cdn.discordapp.com/attachments/765973145852575746/796597938888900661/bg.svg"/>
+  <div class="cardtop">
+<div class="stock title"><%= stock3['code'] %></div>
+    <div class="stock subtitle"><%= stock3['code'] %></div>
+</div>
+  <div class="cardbottom">
+    <div class="stock price">₹<%= stock3['price'] %></div>
+    <div class="stock subtitle"><%= stock3['desc'] %></div>
+  </div>
+  
+</div></div>
+  <div class="card4"><div class="card">
+  <img class="cardimg" src="https://cdn.discordapp.com/attachments/765973145852575746/796597938888900661/bg.svg"/>
+  <div class="cardtop">
+<div class="stock title">Burger King</div>
+    <div class="stock subtitle">Burger King Ind LTD</div>
+</div>
+  <div class="cardbottom">
+    <div class="stock price">₹<%= stock1['price'] %></div>
+    <div class="stock subtitle"><%= stock1['desc'] %></div>
+  </div>
+  
+</div></div>
+  <div class="card5"><div class="card">
+  <img class="cardimg" src="https://cdn.discordapp.com/attachments/765973145852575746/796597938888900661/bg.svg"/>
+  <div class="cardtop">
+<div class="stock title"><%= stock4['code'] %></div>
+    <div class="stock subtitle"><%= stock4['company'] %></div>
+</div>
+  <div class="cardbottom">
+    <div class="stock price">₹<%= stock4['price'] %></div>
+    <div class="stock subtitle"><%= stock4['desc'] %></div>
+  </div>
+  
+</div></div>
+  <div class="card6"><div class="card">
+  <img class="cardimg" src="https://cdn.discordapp.com/attachments/765973145852575746/796597938888900661/bg.svg"/>
+  <div class="cardtop">
+<div class="stock title"><%= stock5['code'] %></div>
+    <div class="stock subtitle"><%= stock5['company'] %></div>
+</div>
+  <div class="cardbottom">
+    <div class="stock price">₹<%= stock5['price'] %></div>
+    <div class="stock subtitle"><%= stock5['desc'] %></div>
+  </div>
+  
+</div></div>
+  <div class="card7"><div class="card">
+  <img class="cardimg" src="https://cdn.discordapp.com/attachments/765973145852575746/796597938888900661/bg.svg"/>
+  <div class="cardtop">
+<div class="stock title"><%= stock1['code'] %></div>
+    <div class="stock subtitle"><%= stock1['code'] %></div>
+</div>
+  <div class="cardbottom">
+    <div class="stock price">₹<%= stock1['price'] %></div>
+    <div class="stock subtitle"><%= stock1['desc'] %></div>
+  </div>
+  
+</div></div>
+</div>
+
+
+
+<script>
+
+$('.cardimg').offset({left: 0, top: 0 });
+
+$( window ).resize(function() {
+  var l = $('.card').offset().left;
+var t = $('.card').offset().top;
+  $('.cardimg').offset({left: 0, top: 0 });
+});
+
+$('.theme').click(function(){
+  $('body').toggleClass("dark")
+})
+
+</script>
+</body>
+ 
+</html>
